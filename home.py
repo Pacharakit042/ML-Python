@@ -28,3 +28,14 @@ html_7 = """
 """
 st.markdown(html_7, unsafe_allow_html=True)
 st.markdown("")
+
+dt = pd.read_csv("./data/iris.csv")
+st.write(dt.head(10))
+
+dt1 = dt['petallength'].sum()
+dt2 = dt['petalwidth'].sum()
+dt3 = dt['sepallength'].sum()
+dt4 = dt['sepalwidth'].sum()
+
+dx = [dt1, dt2, dt3, dt4]
+dx2 = pd.DataFrame(dx, index=["d1", "d2", "d3", "d4"])
